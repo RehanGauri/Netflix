@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.main {
+    background-image: url("assets/netflix-bg-img.webp");
+    object-position: 200px;
+    height: 100vh; 
+    width: 100vw;
+    position: relative;
+    z-index: 0;
+    overflow-y: hidden; 
+}
+
+.box {
+    position: absolute;
+    background-color: black;
+    opacity: 0.70;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    top: 0;
+}
+
+nav {
+    position: relative;
+    width: 100vw;
+    height: 10vh;
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Align items to both ends */
+    align-items: center; /* Center items vertically */
+}
+
+.logo img {
+    width: 180px;
+    margin-left: 30px; /* Adjusted for better positioning */
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.english-button {
+    padding: 8px 26px;
+    margin: 0 5px; /* Space between buttons */
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.english-button:hover {
+    background-color: rgba(23, 1, 1, 0.301);
+}
+
+.signin-button {
+    padding: 8px 15px;
+    color: white;
+    background-color: red;
+    border-radius: 8px;
+    cursor: pointer;
+    width: auto;
+}
+
+.signin-button:hover {
+    background-color: rgb(176, 6, 6);
+}
+
+.translate-logo {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 20px;
+    left: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-top: 120px;
+    box-sizing: border-box;
+    text-align: center; /* Center align text */
+}
+
+.container > :nth-child(1),
+.container > :nth-child(2) {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.container > :nth-child(3) {
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.container > :nth-child(4) {
+    padding-top: 30px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#email { 
+    background-color: transparent;
+    border: 1px solid gray;
+    padding: 17px 100px;
+    margin-top: 10px;
+    border-radius: 4px;
+    color: white;
+    width: 100%; /* Full width for input */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+.get-started{
+    display: flex;
+}
+.get-started-button {
+    background-color: red;
+    padding: 13px 20px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    box-sizing: border-box;
+    border: 1px solid black;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 300px;
+    border-radius: 8px;
+}
+
+.get-started-button:hover {
+    background-color: rgb(176, 6, 6);
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+    .logo img {
+        width: 120px; /* Smaller logo for mobile */
+        margin-left: 10px; /* Adjust margin */
+    }
+
+    .nav-buttons {
+        position: static; /* Remove absolute positioning */
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .english-button,
+    .signin-button {
+        padding: 10px 20px; /* Adjust padding */
+        margin: 5px 0; /* Space between buttons */
+        width: 100%; /* Full width for mobile */
+        box-sizing: border-box; /* Ensure padding doesn't affect width */
+    }
+
+    .container {
+        padding-top: 60px; /* Adjust padding */
+    }
+
+    .container > :nth-child(1),
+    .container > :nth-child(2) {
+        font-size: 36px; /* Smaller font size */
+    }
+
+    .container > :nth-child(3) {
+        font-size: 16px; /* Smaller font size */
+    }
+
+    .container > :nth-child(4) {
+        font-size: 14px; /* Smaller font size */
+    }
+
+    #email {
+        padding: 10px;
+        width: 90%; /* Make input field wider */
+        margin-bottom: 10px; /* Space below input field */
+    }
+
+    .get-started-button {
+        padding: 10px 20px; /* Adjust padding */
+        font-size: 16px; /* Smaller font size */
+        width: 90%; /* Make button wider */
+    }
+}
+
+/* Very Small Screens */
+@media only screen and (max-width: 480px) {
+    .logo img {
+        width: 100px; /* Smaller logo */
+    }
+    .english-button{
+        margin-top:50px;
+    }
+    .nav-buttons{
+        position: relative;
+        left: -30px;
+    }
+    .translate-logo{
+    display: none;
+    }
+    
+    
+    #email{
+        width: 90vw;
+    }
+.get-started{
+    display: initial;
+}
+    .get-started-button{
+      margin-left: 0px;
+        width: 60vw;
+    }
+    .nav-buttons {
+        flex-direction: column;
+        margin-top: 5px;
+    }
+
+    .english-button,
+    .signin-button {
+        width: 100%; /* Full width buttons */
+    }
+}
